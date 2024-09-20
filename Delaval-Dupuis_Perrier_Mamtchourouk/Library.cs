@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Mime;
 
 /// <summary>
 /// Summary description for Class1
@@ -6,18 +8,28 @@
 public class Librabry
 {
 	// Declare an array of Media objects
-	private T[] biblioteque = new T[100];
+	private List<Media> biblioteque = new List<Media>();
 
-	public T this[int i]
+
+	public void ajouterMedia(int ref)
 	{
-		get { return (T)biblioteque[i]; }
-		set { biblioteque[i] = value; }
+        biblioteque.Add(ref);
+    }
+
+	public void supprimerMedia(int ref)
+	{		
+        biblioteque.Remove(ref)
+	}
+
+	public int emprunterMedia(int ref)
+	{
+		mediaEmprunte = biblioteque.Remove(ref)
 	}
 
 	public Librabry()
 	{
 		//
 		// TODO: Add constructor logic here
-		//petit changement
+		// petit changement
 	}
 }
