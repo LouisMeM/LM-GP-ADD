@@ -37,7 +37,28 @@ public class Library
 		mediaEmprunte = biblioteque.Remove(ref)
 	}
 
-	public Library()
+	public static Library operator + (Media media)
+	{
+		if bibliotheque.empty(){
+			throw new Exception("La bibliotheque est vide");
+		} else 
+		{
+			ajouterMedia(media);
+		}
+	}
+
+    public static Library operator -(int ref)
+    {
+        if bibliotheque.empty(){
+            throw new Exception("La bibliotheque est vide");
+        }
+        else
+        {
+            supprimerMedia(ref);
+        }
+    }
+
+    public Library()
 	{
 		//
 		// TODO: Add constructor logic here
