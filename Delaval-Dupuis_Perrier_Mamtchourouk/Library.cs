@@ -39,7 +39,8 @@ public class Library
 
 	public static Library operator + (Media media)
 	{
-		if bibliotheque.empty(){
+		if bibliotheque.empty()
+		{
 			throw new Exception("La bibliotheque est vide");
 		} else 
 		{
@@ -49,7 +50,8 @@ public class Library
 
     public static Library operator -(int ref)
     {
-        if bibliotheque.empty(){
+        if bibliotheque.empty()
+		{
             throw new Exception("La bibliotheque est vide");
         }
         else
